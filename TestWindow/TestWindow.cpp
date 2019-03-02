@@ -64,10 +64,18 @@ int CALLBACK WinMain(
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
 	PAINTSTRUCT ps;
 	HDC hdc;
+	TCHAR text[] = _T("Test Window");
 
 	switch (message) {
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
+		TextOut(
+			hdc,
+			5,
+			5,
+			text,
+			_tcslen(text)
+		);
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:
