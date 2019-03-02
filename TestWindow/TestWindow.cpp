@@ -67,17 +67,25 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 	TCHAR text[] = _T("Test Window");
 
 	switch (message) {
-	case WM_PAINT:
-		hdc = BeginPaint(hWnd, &ps);
-		TextOut(
-			hdc,
-			5,
-			5,
-			text,
-			_tcslen(text)
+	case WM_CREATE:
+		CreateWindow(
+			L"BUTTON",
+			L"Exit",
+			WS_VISIBLE | WS_CHILD,
+			10,
+			10,
+			100,
+			30,
+			hWnd,
+			(HMENU)1,
+			hInst,
+			NULL
 		);
-		EndPaint(hWnd, &ps);
 		break;
+	case WM_COMMAND:
+		if (LOWORD(wParam) == 1) {
+			PostQuitMessage(0);
+		}
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
