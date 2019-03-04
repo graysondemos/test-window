@@ -1,4 +1,4 @@
 ﻿  TestWindow.cpp
-D:\Coding\C++\TestWindow\TestWindow\TestWindow.cpp(66): warning C4101: 'hdc': unreferenced local variable
-D:\Coding\C++\TestWindow\TestWindow\TestWindow.cpp(65): warning C4101: 'ps': unreferenced local variable
+D:\Coding\C++\TestWindow\TestWindow\TestWindow.cpp(64): warning C4101: 'hdc': unreferenced local variable
+D:\Coding\C++\TestWindow\TestWindow\TestWindow.cpp(63): warning C4101: 'ps': unreferenced local variable
   TestWindow.vcxproj -> D:\Coding\C++\TestWindow\Debug\TestWindow.exe

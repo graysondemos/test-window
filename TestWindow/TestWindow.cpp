@@ -7,8 +7,6 @@ static TCHAR szTitle[] = _T("Test Window");
 
 HINSTANCE hInst;
 
-LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
-
 int CALLBACK WinMain(
 	HINSTANCE hInstance,
 	HINSTANCE hPrevInstance,
@@ -81,6 +79,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 			hInst,
 			NULL
 		);
+
 		break;
 	case WM_COMMAND:
 		if (LOWORD(wParam) == 1) {
